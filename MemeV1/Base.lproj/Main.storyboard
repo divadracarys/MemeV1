@@ -76,7 +76,11 @@
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="GXG-lk-gWX"/>
-                                            <barButtonItem style="plain" systemItem="camera" id="eBu-Sx-fwO"/>
+                                            <barButtonItem style="plain" systemItem="camera" id="eBu-Sx-fwO">
+                                                <connections>
+                                                    <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="vGS-Oz-u9n"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="PtZ-eZ-wrv"/>
                                         </items>
                                     </toolbar>
@@ -92,6 +96,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="eBu-Sx-fwO" id="d3I-Fd-HRW"/>
                         <outlet property="imageView" destination="ES3-aq-ztX" id="G0D-d3-qpO"/>
                     </connections>
                 </viewController>
