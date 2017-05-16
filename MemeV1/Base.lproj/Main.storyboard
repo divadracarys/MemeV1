@@ -22,61 +22,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OlC-m9-7YF">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5c-Cd-KD5">
                                 <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6p-LA-RDe">
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rut-gW-Ga4">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                         <items>
-                                            <barButtonItem systemItem="action" id="76i-1p-7kS"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="9Zc-YK-lXp"/>
-                                            <barButtonItem style="plain" systemItem="cancel" id="f73-0B-AcU"/>
+                                            <barButtonItem systemItem="action" id="TRx-Pb-SC4"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="ANX-u0-ZIY"/>
+                                            <barButtonItem style="plain" systemItem="cancel" id="1gd-8y-e9v"/>
                                         </items>
                                     </toolbar>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWX-50-tsq">
-                                        <rect key="frame" x="0.0" y="44" width="343" height="65"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rX-1n-Ld5">
-                                        <rect key="frame" x="0.0" y="109" width="343" height="448"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-73-MXe">
-                                        <rect key="frame" x="0.0" y="557" width="343" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWq-u3-iVE">
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="wCr-gm-lTO">
+                                        <rect key="frame" x="0.0" y="44" width="343" height="543"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-aq-ztX">
+                                                <rect key="frame" x="8" y="0.0" width="343" height="543"/>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTW-Sd-3Su" userLabel="Bottom Text Field">
+                                                <rect key="frame" x="8" y="513" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-94-vn3" userLabel="Top Text Field">
+                                                <rect key="frame" x="8" y="8" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mAE-94-vn3" firstAttribute="top" secondItem="wCr-gm-lTO" secondAttribute="topMargin" id="0nY-Xe-oyn"/>
+                                            <constraint firstItem="yTW-Sd-3Su" firstAttribute="leading" secondItem="ES3-aq-ztX" secondAttribute="leading" id="0ua-CW-KKO"/>
+                                            <constraint firstItem="yTW-Sd-3Su" firstAttribute="trailing" secondItem="mAE-94-vn3" secondAttribute="trailing" id="MxX-aD-c0c"/>
+                                            <constraint firstItem="yTW-Sd-3Su" firstAttribute="leading" secondItem="mAE-94-vn3" secondAttribute="leading" id="P69-ID-dXR"/>
+                                            <constraint firstItem="ES3-aq-ztX" firstAttribute="height" secondItem="wCr-gm-lTO" secondAttribute="height" id="SgR-6b-Do3"/>
+                                            <constraint firstItem="ES3-aq-ztX" firstAttribute="leading" secondItem="wCr-gm-lTO" secondAttribute="leadingMargin" id="ZRv-bl-fm4"/>
+                                            <constraint firstItem="yTW-Sd-3Su" firstAttribute="trailing" secondItem="ES3-aq-ztX" secondAttribute="trailing" id="bar-MT-vgY"/>
+                                            <constraint firstItem="ES3-aq-ztX" firstAttribute="top" secondItem="wCr-gm-lTO" secondAttribute="top" id="eN7-s3-cYE"/>
+                                            <constraint firstItem="ES3-aq-ztX" firstAttribute="width" secondItem="wCr-gm-lTO" secondAttribute="width" id="ot3-AI-q9T"/>
+                                            <constraint firstItem="ES3-aq-ztX" firstAttribute="bottom" secondItem="yTW-Sd-3Su" secondAttribute="bottom" id="xz5-9E-FEC"/>
+                                        </constraints>
+                                    </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-Rd-gFS">
                                         <rect key="frame" x="0.0" y="587" width="343" height="44"/>
                                         <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="tDx-Qc-l5s"/>
-                                            <barButtonItem title="Album" id="lMp-5g-MgO"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="fnO-1L-6Zp"/>
-                                            <barButtonItem style="plain" systemItem="camera" id="c7v-lf-2bz"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Qu1-B4-pRU"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="uRI-Uf-vgm"/>
+                                            <barButtonItem title="Album" id="YOr-hh-LS3">
+                                                <connections>
+                                                    <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="8PW-Ym-ier"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="GXG-lk-gWX"/>
+                                            <barButtonItem style="plain" systemItem="camera" id="eBu-Sx-fwO"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="PtZ-eZ-wrv"/>
                                         </items>
                                     </toolbar>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="BWX-50-tsq" firstAttribute="width" secondItem="1rX-1n-Ld5" secondAttribute="width" id="Y2l-Vk-NSV"/>
-                                    <constraint firstItem="FRc-73-MXe" firstAttribute="width" secondItem="1rX-1n-Ld5" secondAttribute="width" id="hGa-Z8-HFG"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OlC-m9-7YF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3GX-9O-E42"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OlC-m9-7YF" secondAttribute="trailing" id="FrI-X0-Tcf"/>
-                            <constraint firstItem="OlC-m9-7YF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZRR-hg-ybf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OlC-m9-7YF" secondAttribute="bottom" constant="8" symbolic="YES" id="fjz-wV-Lr4"/>
+                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jkr-pe-sny"/>
+                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="a11-6k-ahH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5c-Cd-KD5" secondAttribute="bottom" constant="8" symbolic="YES" id="ltx-hq-8g5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S5c-Cd-KD5" secondAttribute="trailing" id="qTw-Kk-gRP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ES3-aq-ztX" id="G0D-d3-qpO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="143"/>
+            <point key="canvasLocation" x="184.80000000000001" y="142.57871064467767"/>
         </scene>
     </scenes>
 </document>
