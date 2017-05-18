@@ -96,7 +96,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // When the keyboardWillShow notification is received, shift the view's frame up
     func keyboardWillShow(_ notification:Notification) {
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        if bottomTextField.isFirstResponder {
+         view.frame.origin.y -= getKeyboardHeight(notification)   
+        }
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
