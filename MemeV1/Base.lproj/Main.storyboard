@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5c-Cd-KD5">
                                 <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rut-gW-Ga4">
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rut-gW-Ga4" userLabel="Top Toolbar">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                         <items>
                                             <barButtonItem systemItem="action" id="TRx-Pb-SC4"/>
@@ -66,7 +66,7 @@
                                             <constraint firstItem="ES3-aq-ztX" firstAttribute="bottom" secondItem="yTW-Sd-3Su" secondAttribute="bottom" constant="50" id="xz5-9E-FEC"/>
                                         </constraints>
                                     </view>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-Rd-gFS">
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-Rd-gFS" userLabel="Bottom Toolbar">
                                         <rect key="frame" x="0.0" y="587" width="343" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="uRI-Uf-vgm"/>
@@ -97,9 +97,13 @@
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="yTW-Sd-3Su" id="5lJ-Ma-RgT"/>
+                        <outlet property="bottomToolbar" destination="Qbz-Rd-gFS" id="gVe-u7-f0S"/>
                         <outlet property="cameraButton" destination="eBu-Sx-fwO" id="d3I-Fd-HRW"/>
+                        <outlet property="cancelButton" destination="1gd-8y-e9v" id="4va-3F-Sbv"/>
                         <outlet property="imageView" destination="ES3-aq-ztX" id="G0D-d3-qpO"/>
+                        <outlet property="shareButton" destination="TRx-Pb-SC4" id="AxE-U2-Kek"/>
                         <outlet property="topTextField" destination="mAE-94-vn3" id="k2V-IQ-mcW"/>
+                        <outlet property="topToolbar" destination="rut-gW-Ga4" id="1LI-98-4yF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

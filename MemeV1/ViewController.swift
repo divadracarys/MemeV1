@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-    
+    struct Meme {
+        let topText, bottomText: String
+        let originalImage, memedImage: UIImage
+    }
+    var meme: Meme?
 
+    @IBOutlet weak var topToolbar: UIToolbar!
+    @IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
     let memeTextAttributes: [String: Any] = [
@@ -22,6 +30,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size:30)!,
         NSStrokeWidthAttributeName: -3.0] //Check the difference b/w -3 n +3
+    
+    func save() {
+        meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        // Hide toolbar and navbar
+        topToolbar.isHidden = true
+        bottomToolbar.isHidden = true
+        // render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // Show toolbar and navbar
+        topToolbar.isHidden = false
+        bottomToolbar.isHidden = false
+        
+        return memedImage
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
