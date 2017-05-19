@@ -56,6 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        shareButton.isEnabled = false
         subscribeToKeyboardNotifications()
     }
     
@@ -79,6 +80,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
             imageView.contentMode = .scaleAspectFit
+            shareButton.isEnabled = true
         }
         dismiss(animated: true, completion: nil)
     }
@@ -97,6 +99,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.sourceType = .camera
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        let image = generateMemedImage()
+        let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activity, animated: true, completion: nil)
+        activity.completionWithItemsHandler = {_ in
+            self.save()
+            self.dismiss(animated: true, completion: nil)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+
+
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text!.contains("TOP") || textField.text!.contains("BOTTOM"){
