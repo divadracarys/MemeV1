@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    // MARK: Properties
     struct Meme {
         let topText, bottomText: String
         let originalImage, memedImage: UIImage
@@ -30,6 +31,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size:30)!,
         NSStrokeWidthAttributeName: -3.0] //Check the difference b/w -3 n +3
+    
+    // MARK: Functions
     
     func save() {
         meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
@@ -53,10 +56,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    // MARK: Override functions
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        shareButton.isEnabled = false
+        // shareButton.isEnabled = false
         subscribeToKeyboardNotifications()
     }
     
@@ -74,6 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.textAlignment = .center
         topTextField.delegate = self
         bottomTextField.delegate = self
+        shareButton.isEnabled = false // Don't put it in viewWillAppear
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -84,6 +90,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Actions
 
 
     @IBAction func pickImageFromAlbum(_ sender: Any) {
@@ -111,6 +123,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
+        imageView.image = nil
+        shareButton.isEnabled = false
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Text Field Delegates' Necessities
 
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
