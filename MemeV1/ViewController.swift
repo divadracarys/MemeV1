@@ -83,6 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.delegate = self
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
