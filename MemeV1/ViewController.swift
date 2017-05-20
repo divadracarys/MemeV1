@@ -69,17 +69,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = .center
-        bottomTextField.textAlignment = .center
-        topTextField.delegate = self
-        bottomTextField.delegate = self
+        configureTextField(topTextField)
+        configureTextField(bottomTextField)
         shareButton.isEnabled = false // Don't put it in viewWillAppear
+    }
+    
+    // Function to avoid repetitive blocks of code
+    func configureTextField(_ textField: UITextField){
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.delegate = self
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -95,21 +99,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
+    func pickingImage(_ sourceType: UIImagePickerControllerSourceType){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = sourceType
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
     // MARK: Actions
 
 
     @IBAction func pickImageFromAlbum(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true, completion: nil)
+        pickingImage(.photoLibrary)
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        self.present(imagePicker, animated: true, completion: nil)
+        pickingImage(.camera)
     }
     
     @IBAction func shareButtonPressed(_ sender: Any) {
