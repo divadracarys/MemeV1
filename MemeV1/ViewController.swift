@@ -11,10 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     // MARK: Properties
-    struct Meme {
-        let topText, bottomText: String
-        let originalImage, memedImage: UIImage
-    }
+   
     var meme: Meme?
 
     @IBOutlet weak var topToolbar: UIToolbar!
