@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5c-Cd-KD5">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rut-gW-Ga4" userLabel="Top Toolbar">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <items>
                                             <barButtonItem systemItem="action" id="TRx-Pb-SC4">
                                                 <connections>
@@ -42,19 +42,19 @@
                                         </items>
                                     </toolbar>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="wCr-gm-lTO">
-                                        <rect key="frame" x="0.0" y="44" width="343" height="543"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-aq-ztX">
-                                                <rect key="frame" x="8" y="0.0" width="327" height="543"/>
+                                                <rect key="frame" x="8" y="0.0" width="359" height="559"/>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTW-Sd-3Su" userLabel="Bottom Text Field">
-                                                <rect key="frame" x="28" y="476" width="287" height="17"/>
+                                                <rect key="frame" x="28" y="492" width="319" height="17"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-94-vn3" userLabel="Top Text Field">
-                                                <rect key="frame" x="28" y="58" width="287" height="17"/>
+                                                <rect key="frame" x="28" y="58" width="319" height="17"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-Rd-gFS" userLabel="Bottom Toolbar">
-                                        <rect key="frame" x="0.0" y="587" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="603" width="375" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="uRI-Uf-vgm"/>
                                             <barButtonItem title="Album" id="YOr-hh-LS3">
@@ -106,10 +106,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jkr-pe-sny"/>
-                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="a11-6k-ahH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5c-Cd-KD5" secondAttribute="bottom" constant="8" symbolic="YES" id="ltx-hq-8g5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S5c-Cd-KD5" secondAttribute="trailing" id="qTw-Kk-gRP"/>
+                            <constraint firstAttribute="trailing" secondItem="S5c-Cd-KD5" secondAttribute="trailing" id="GXy-pN-XDO"/>
+                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N38-qu-ZoH"/>
+                            <constraint firstItem="S5c-Cd-KD5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RXS-xT-935"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5c-Cd-KD5" secondAttribute="bottom" id="bgN-dQ-oKR"/>
                         </constraints>
                     </view>
                     <connections>
