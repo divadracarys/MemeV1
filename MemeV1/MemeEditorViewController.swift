@@ -122,7 +122,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             self.save()
             self.dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
+        // dismiss(animated: true, completion: nil)
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
