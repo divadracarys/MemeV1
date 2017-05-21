@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ViewController {
+extension MemeEditorViewController {
     // MARK: Sign Up For Keyboard Notifications
     // Get notified when the keyboard appears
     func subscribeToKeyboardNotifications() {

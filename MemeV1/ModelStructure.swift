@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // MARK: Structure to set up a model
-extension ViewController {
+extension MemeEditorViewController {
     
     struct Meme {
         let topText, bottomText: String
