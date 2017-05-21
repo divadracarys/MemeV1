@@ -54,7 +54,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-94-vn3" userLabel="Top Text Field">
-                                                <rect key="frame" x="20" y="58" width="335" height="17"/>
+                                                <rect key="frame" x="20" y="38" width="335" height="17"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -62,7 +62,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="mAE-94-vn3" firstAttribute="top" secondItem="wCr-gm-lTO" secondAttribute="topMargin" constant="50" id="0nY-Xe-oyn"/>
+                                            <constraint firstItem="mAE-94-vn3" firstAttribute="top" secondItem="wCr-gm-lTO" secondAttribute="topMargin" constant="30" id="0nY-Xe-oyn"/>
                                             <constraint firstItem="yTW-Sd-3Su" firstAttribute="leading" secondItem="ES3-aq-ztX" secondAttribute="leading" constant="20" id="0ua-CW-KKO"/>
                                             <constraint firstAttribute="trailing" secondItem="ES3-aq-ztX" secondAttribute="trailing" id="6i1-VR-zky"/>
                                             <constraint firstItem="yTW-Sd-3Su" firstAttribute="trailing" secondItem="mAE-94-vn3" secondAttribute="trailing" id="MxX-aD-c0c"/>
