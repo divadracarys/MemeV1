@@ -41,7 +41,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         topToolbar.isHidden = true
         bottomToolbar.isHidden = true
         // render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIGraphicsBeginImageContext(view.frame.size) // Removed self from inside the parameter
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
