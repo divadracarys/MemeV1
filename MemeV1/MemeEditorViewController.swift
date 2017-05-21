@@ -26,7 +26,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     let memeTextAttributes: [String: Any] = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size:30)!,
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size:40)!,
         NSStrokeWidthAttributeName: -3.0] //Check the difference b/w -3 n +3
     
     // MARK: Functions
