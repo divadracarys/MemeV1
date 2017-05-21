@@ -27,7 +27,8 @@ extension MemeEditorViewController {
     // When the keyboardWillShow notification is received, shift the view's frame up
     func keyboardWillShow(_ notification:Notification) {
         if bottomTextField.isFirstResponder {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = getKeyboardHeight(notification) * -1
+            // view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
